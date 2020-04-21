@@ -20,7 +20,7 @@ y_train = np_utils.to_categorical(y_train)
 x_test = x_test.astype('float32')
 x_test /= 255
 y_test = np_utils.to_categorical(y_test)
-
+#Create the deep neural network as a list of layers
 network = [
     FlattenLayer(input_shape=(28, 28)),
     FCLayer(28 * 28, 150),
@@ -73,7 +73,7 @@ test_network(network,x_test,y_test)
 
 
 import matplotlib.pyplot as plt
-
+#iterate through the testing data and print the prediction with highest probability and the actual label
 samples = 10
 for test, true in zip(x_test[:samples], y_test[:samples]):
     print_digit(test)
