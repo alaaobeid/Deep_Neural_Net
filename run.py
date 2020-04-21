@@ -59,7 +59,7 @@ for epoch in range(epochs):
     print('%d/%d, error=%f' % (epoch + 1, epochs, error))
 
 
-
+#test the network and print a classification report
 test_network(network,x_test,y_test)
 
 
